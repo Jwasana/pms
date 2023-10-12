@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TaskComponent } from './components/task/task.component';
-import { ProjectComponent } from './components/project/project.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: TaskComponent
+    component: ProductsComponent
   },
   {
-    path: "task",
-    component: TaskComponent},
-    {
-      path: "project",
-      component: ProjectComponent
-    }
+    path: "products",
+    component: ProductsComponent
+  }
+   
 ];
 
 @NgModule({

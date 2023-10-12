@@ -3,17 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TaskComponent } from './components/task/task.component';
-import { ProjectComponent } from './components/project/project.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    TaskComponent,
-    ProjectComponent
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
