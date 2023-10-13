@@ -9,15 +9,19 @@
         <th scope="col">Type</th>
         <th scope="col">Color</th>
         <th scope="col">Price</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let product of products">
-        <th scope="row">{{product.id}}</th>
+        <th>{{product.id}}</th>
         <td>{{product.name}}</td>
         <td>{{product.type}}</td>
         <td>{{product.color}}</td>
         <td>{{product.price | currency: 'Rs'}}</td>
+        <td><a [routerLink]="['/products', 'edit', product.id]">Edit</a></td>
+        <td><a>Delete</a></td>
       </tr>          
     </tbody>
   </table>
