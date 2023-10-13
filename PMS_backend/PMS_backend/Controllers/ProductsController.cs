@@ -69,12 +69,22 @@ namespace PMS_backend.Controllers
 
                 await _pmsDbContext.SaveChangesAsync();
 
-                return Ok(product);
-            
+                return Ok(product);                
+        }
 
-            
+        [HttpDelete]
+        [Route("{id:Guid}")]
 
-           
+        public async Task<IActionResult> DeleteProduct(Guid id)
+        {
+            var product = await _pmsDbContext.Products.FindAsync(id);
+            if (product == null)
+                return NotFound();
+
+            _pmsDbContext.Products.Remove(product);
+            await _pmsDbContext.SaveChangesAsync();
+
+            return Ok(product);
         }
     }
 }
