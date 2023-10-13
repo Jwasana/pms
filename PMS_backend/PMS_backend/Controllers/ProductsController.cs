@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PMS_backend.Data;
+using PMS_backend.Models;
 
 namespace PMS_backend.Controllers
 {
@@ -21,6 +22,17 @@ namespace PMS_backend.Controllers
 
                 return Ok(products);
            
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddProduct([FromBody] Product product)
+        {
+            product.Id = Guid.NewGuid();
+
+           await _pmsDbContext.Products.AddAsync(product);
+            await _pmsDbContext.SaveChangesAsync();
+
+                return Ok(product);
         }
     }
 }
