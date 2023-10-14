@@ -20,7 +20,7 @@ export class AddProductComponent {
 
   constructor(private productService: ProductsService, private router: Router){}
   addProduct(){   
-    console.log(this.newProduct)
+    // console.log(this.newProduct)
     this.productService.addProduct(this.newProduct)
     .subscribe({      
       next: (product) => {

@@ -47,17 +47,29 @@ export class EditProductComponent implements OnInit{
 
   }
 
-  editProduct(){
-    console.log(this.updateProduct)
-    this.productService.updateProduct(this.updateProduct.id, this.updateProduct)   
-    .subscribe({      
-      next: (response) => {
-        this.router.navigate(['products'])        
-      },
-      error: (response: any) => {
-        console.log(response)
-      }
-    })
+  // editProduct(){
+  //   console.log(this.updateProduct)
+  //   this.productService.updateProduct(this.updateProduct.id, this.updateProduct)   
+  //   .subscribe({      
+  //     next: (response) => {
+  //       this.router.navigate(['products'])        
+  //     },
+  //     error: (response: any) => {
+  //       console.log(response)
+  //     }
+  //   })
 
+  // }
+  editProduct() {
+    this.productService
+      .updateProduct(this.updateProduct.id, this.updateProduct)
+      .subscribe({
+        next: (response) => {
+          this.router.navigate(['products']);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
   }
 }
