@@ -52,6 +52,7 @@ export class EditProductComponent implements OnInit{
       .updateProduct(this.updateProduct.id, this.updateProduct)
       .subscribe({
         next: (response) => {
+          window.alert("Product uodated successfully!")
           this.router.navigate(['/']);
         },
         error: (error) => {
