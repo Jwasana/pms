@@ -35,14 +35,8 @@ export class ProductsComponent implements OnInit {
 
     this.productService.deleteProduct(id)
     .subscribe({
-      next: (response) => {
-        console.log("Deleted")
-        let currentUrl = this.router.url;
-        this.router.navigateByUrl('/', {skipLocationChange: true})
-        .then(() => {
-          this.router.navigate([currentUrl])
-        })
-
+      next: (response) => {      
+        this.ngOnInit();
       },
       error: (error) => {
         console.log(error);
