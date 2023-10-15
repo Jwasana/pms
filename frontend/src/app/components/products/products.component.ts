@@ -31,12 +31,21 @@ export class ProductsComponent implements OnInit {
     
   }
 
+  showAlert(id: string){
+    const userConfirmed = window.confirm('Do you want to proceed?');
+    
+    if (userConfirmed) {
+      this.deleteProduct(id)     
+    } 
+  }
+
   deleteProduct(id: string){
 
     this.productService.deleteProduct(id)
     .subscribe({
       next: (response) => {      
         this.ngOnInit();
+        window.alert("Product deleted!")
       },
       error: (error) => {
         console.log(error);
@@ -44,5 +53,4 @@ export class ProductsComponent implements OnInit {
     })
 
   }
-
 }

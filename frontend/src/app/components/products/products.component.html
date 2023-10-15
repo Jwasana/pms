@@ -29,7 +29,7 @@
         <td>{{product.price | currency: 'Rs'}}</td>
         <td>          
             <button type="button" class="btn btn-outline-primary" [routerLink]="['/products', 'edit', product.id]">Update</button>
-            <button type="button" class="btn btn-outline-danger" [routerLink]="[]" (click)="deleteProduct(product.id)">Delete</button>
+            <button type="button" class="btn btn-outline-danger" [routerLink]="[]" (click)="showAlert(product.id)">Delete</button>
         </td>
       </tr>          
     </tbody>
