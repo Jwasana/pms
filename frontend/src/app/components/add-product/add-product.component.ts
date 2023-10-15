@@ -23,7 +23,7 @@ export class AddProductComponent {
     this.productService.addProduct(this.newProduct)
     .subscribe({      
       next: (product) => {
-        this.router.navigate(['products'])
+        this.router.navigate(['/'])
       },
       error: (response: any) => {
         console.log(response)

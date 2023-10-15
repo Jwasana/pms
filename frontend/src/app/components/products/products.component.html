@@ -1,27 +1,36 @@
-<div class="container">
-    <h1>Products</h1>
+<div class="container table-container">
+  <div class="row">
+    <div class="col">
+      <h1>All Products({{products.length}})</h1>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-success" [routerLink] = "['product','add']">Add New Product</button>
+    </div>  
+  </div>
+   
 
-<table class="table" *ngIf="products && products.length > 0">
-    <thead>
+<table class="table table-striped" *ngIf="products && products.length > 0">
+    <thead class="table">
       <tr>
-        <th scope="col">Id</th>
+        <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Type</th>
         <th scope="col">Color</th>
         <th scope="col">Price</th>
-        <th></th>
-        <th></th>
+        <th  scope="col">Actions</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <th>{{product.id}}</th>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let product of products; let indexOfelement=index;">
+        <th>{{indexOfelement + 1}}</th>
         <td>{{product.name}}</td>
         <td>{{product.type}}</td>
         <td>{{product.color}}</td>
         <td>{{product.price | currency: 'Rs'}}</td>
-        <td><a [routerLink]="['/products', 'edit', product.id]">Edit</a></td>
-        <td><a [routerLink]="[]" (click)="deleteProduct(product.id)">Delete</a></td>
+        <td>          
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/products', 'edit', product.id]">Update</button>
+            <button type="button" class="btn btn-outline-danger" [routerLink]="[]" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
       </tr>          
     </tbody>
   </table>
