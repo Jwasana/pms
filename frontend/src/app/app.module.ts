@@ -8,13 +8,15 @@ import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    HeaderComponent
     
   ],
   imports: [
