@@ -18,7 +18,6 @@ export class ProductsService {
   }
 
   addProduct(newProduct: Product) : Observable<Product>{
-    //newProduct.id = '3fa85f64-5717-4562-b3fc-2c963f66afa6';
     newProduct.id = '00000000-0000-0000-0000-000000000000';
     return this.http.post<Product>(this.baseApiUrl + '/api/products', newProduct);
   }
@@ -28,11 +27,6 @@ export class ProductsService {
     return  this.http.get<Product>(this.baseApiUrl + '/api/products/' + id); 
 
   }
-
-  // updateProduct(id: string, updateProduct: Product) : Observable<Product> {
-          
-  //   return this.http.put<Product>(this.baseApiUrl + '/api/products/' + id, updateProduct);
-  // }
 
   updateProduct(id: string, updateProductRequest: Product): Observable<Product> {
     console.log(111, updateProductRequest)
