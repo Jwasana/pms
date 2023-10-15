@@ -31,4 +31,8 @@ export class AddProductComponent {
     })
   }
 
+  cancelAddProduct(){
+    this.router.navigate(['/'])
+  }
+
 }

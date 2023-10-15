@@ -52,11 +52,16 @@ export class EditProductComponent implements OnInit{
       .updateProduct(this.updateProduct.id, this.updateProduct)
       .subscribe({
         next: (response) => {
-          this.router.navigate(['products']);
+          this.router.navigate(['/']);
         },
         error: (error) => {
           console.log(error);
         },
       });
   }
+
+  cancelUpdate(){
+    this.router.navigate(['/'])
+  }
+
 }
