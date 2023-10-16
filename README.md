@@ -1,4 +1,4 @@
-# ProductPulse – Product Management System
+# ProductPulse â€“ Product Management System
 
 
 Project Description
@@ -13,7 +13,7 @@ To get started with the Product Management System, follow these steps:
 1. Clone the repository.
 2. Install necessary dependencies.
 3. Update server name,
-On the ‘PMS_backend/appsetting.json’ file
+On the â€˜PMS_backend/appsetting.jsonâ€™ file
 Update server name
 
 
@@ -22,16 +22,17 @@ Update server name
 
 
 Product list
-
+![image](https://github.com/Jwasana/pms/assets/56547353/4a836d43-7e5c-4967-96fd-245c4b3f4325)
 
 Add new Product
-
-
+![image](https://github.com/Jwasana/pms/assets/56547353/4e54a457-2b21-4077-ae58-8d688d910bb3)
 
 Update existing product
-
+![image](https://github.com/Jwasana/pms/assets/56547353/ed1ffe45-7bb0-46df-b308-e37324f8a3a2)
 
 Delete product
+![image](https://github.com/Jwasana/pms/assets/56547353/e3d60a54-fe90-4a45-be9b-a629cd4581a5)
+
 
 
 
